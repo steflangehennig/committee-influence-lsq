@@ -1,3 +1,13 @@
+##################################################
+# A Mesure of Congressional Committee Influence
+# Legislative Studies Quarterly
+##################################################
+
+'''
+The following code is for Figures 4, 5, and 6 in Section 8 ("Additional Figures") in the Supplemental Appendix.
+The data are pivoted from wide to long format and then plotted using facet plots.
+'''
+
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd 
