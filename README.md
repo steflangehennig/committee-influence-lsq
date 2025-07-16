@@ -38,7 +38,7 @@ seaborn >= 0.11
 
 If you use these materials, please cite the original paper:
 
-Langehennig, S., R. Bell, & E.S. Adler. 2025. "A Measure of Congressional Committee Influence." _Legislative Studies Quarterly_. https://doi.org/10.1111/lsq.70027
+> Langehennig, S., R. Bell, & E.S. Adler. 2025. "A Measure of Congressional Committee Influence." _Legislative Studies Quarterly_. https://doi.org/10.1111/lsq.70027
 
 
 ## Contact
