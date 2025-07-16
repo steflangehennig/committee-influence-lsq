@@ -4,7 +4,7 @@ Code repo for article forthcoming in [Legislative Studies Quarterly](https://onl
 ## Repository Structure
 
 - **`code/`** – Scripts used to generate all figures and tables in the main text and supplemental appendix.
-- **`data/`** – Processed data files used in the paper's analysis and figures.
+- **`data/`** – Data files used in the paper's analysis and figures.
 
 ## Repo Usage
 
