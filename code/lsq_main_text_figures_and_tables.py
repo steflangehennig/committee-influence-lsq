@@ -216,3 +216,56 @@ plt.tight_layout()
 name = 'Committee PAP Count No PC ANS'
 plt.savefig(save_file + name.replace(' ', '') + '.png')
 export_cross_tab_table(cross_tab=ct, file_name=name)
+
+
+# Table 1
+words = data[data['year'] % 2 == 0].groupby(['congress'])['word_count'].sum()
+
+ct = pd.crosstab(index=laws_2['Congress'], columns=laws_2['Committee'])
+ct_no_pcnas = pd.crosstab(index=laws_2[laws_2['ANS'] != 'PC ANS']['Congress'], columns=laws_2[laws_2['ANS'] != 'PC ANS']['Committee'])
+
+totwords104_no_pcnas = laws_2[laws_2['Congress'] == 104][laws_2['ANS'] != 'PC ANS'].groupby(['Committee'])['Work Count 104'].sum()
+totwords115_no_pcnas = laws_2[laws_2['Congress'] == 115][laws_2['ANS'] != 'PC ANS'].groupby(['Committee'])['Word Count 115'].sum()
+
+word_prop104_no_pcnas  = totwords104_no_pcnas / words[104]
+word_prop115_no_pcnas = totwords115_no_pcnas / words[115]
+
+
+out_table = pd.DataFrame(
+    data={'Prop. in 104th': word_prop104_no_pcnas,
+          'Prop. in 115th': word_prop115_no_pcnas,
+          })
+out_table = out_table.iloc[1:,:]
+out_table['104th Rank'] = out_table['Prop. in 104th'].rank(ascending=False)
+out_table['105th Rank'] = out_table['Prop. in 115th'].rank(ascending=False)
+
+out_table = out_table.loc[out_table.iloc[:,-1].sort_values(ascending = True).index,:]
+
+gw = {
+    102: '16',
+    104: '3',
+    106: '7',
+    113: '6',
+    115: '11',
+    124: '15',
+    128: '2',
+    134: '5',
+    138: '14',
+    142: '10',
+    156: '8',
+    164: '13',
+    173: '12',
+    176: '4',
+    182: '18',
+    184: '20',
+    #186: '9',
+    242: 'NA',
+    251: '19',
+    192: '17',
+    196: '1'
+}
+out_table.loc[gw.keys(), 'Grosewort'] = [v for v in gw.values()]
+out_table = out_table.rename(index=stewart_to_committee)
+name = 'CommitteeANSInfoNOPCANS'
+out_table = round(out_table, 4)
+export_cross_tab_table(cross_tab=out_table, file_name=name)
