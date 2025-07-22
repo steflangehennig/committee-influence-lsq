@@ -1,0 +1,13 @@
+# committeee_data
+Section Congress data
+'year', 'congress', 'section_type', 'section_heading', 'cite', 'created', 'created_cong', 'change', 'expiring', 'simple',
+        'demonstration', 'number_of_exps', 'expiration', 'expiration_change', 'expiration_length', 'years_expired',
+        'match_type', 'word_count', 'pap', 'title_num', 'is_expiration_year', 'num_committee', 'refs'
+
+# law_data
+Row per section committee (wide data)
+'Cite'
+'Title', 'Section', 'PAP', 'Committee', 'Word Count',"ANS"
+# law_data2
+Row per section committee Congress (long data)
+'Cite', 'Title', 'Section', 'PAP', 'Committee', 'Congress', 'Word Count 115', 'Work Count 104',"Ref","ANS"
