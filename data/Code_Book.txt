@@ -8,6 +8,7 @@ Section Congress data
 Row per section committee (wide data)
 'Cite'
 'Title', 'Section', 'PAP', 'Committee', 'Word Count',"ANS"
+
 # law_data2
 Row per section committee Congress (long data)
 'Cite', 'Title', 'Section', 'PAP', 'Committee', 'Congress', 'Word Count 115', 'Work Count 104',"Ref","ANS"
