@@ -27,7 +27,8 @@ python>=3.9
 ```
 
 Packages:
-> See `requirements.txt`.
+
+See `requirements.txt`.
 
 ## Citation
 
