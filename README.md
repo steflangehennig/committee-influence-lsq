@@ -27,12 +27,7 @@ python>=3.9
 ```
 
 Packages:
-```
-pandas >= 1.3  
-numpy >= 1.21  
-matplotlib >= 3.4  
-seaborn >= 0.11
-```
+> See `requirements.txt`.
 
 ## Citation
 
